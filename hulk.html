@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hulk</title>
+        <link rel="stylesheet" href="style.css" >
+    </head>
+    <body>
+          <audio id="bg-music" loop>
+    <source src="theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="music-toggle">Play Music</button>
+
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-toggle");
+
+    let isPlaying = false;
+
+    button.addEventListener("click", () => {
+        if (!isPlaying) {
+            music.play();
+            button.textContent = "Pause Music";
+        } else {
+            music.pause();
+            button.textContent = "Play Music";
+        }
+        isPlaying = !isPlaying;
+    });
+</script>
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    <div class="gallery">
+            <img src="avengers_03.jpg" />
+        </div>
+        <h4>Bio</h4>
+        <p><b>Full name:</b> Robert Bruce Banner </p>
+        <p><b>Place of Birth:</b> Dayton OH, United States</p>
+        <p><b>Alignment:</b> Good</p>
+        <p><b>Race:</b> Human mutate</p>
+        <br/>
+        <h4>Power Stats</h4>
+        <p><b>Intelligence:</b> 40%</p>
+        <p><b>Strength:</b> 100%</p>
+        <p><b>Speed:</b> 50%</p>
+        <p><b>Durability:</b> 94%</p>
+        <p><b>Power:</b> 100%</p>
+        <p><b>Combat:</b> 55%</p>
+        <a href="index.html">← Back to Avengers</a>
+    </body>
+</html>
