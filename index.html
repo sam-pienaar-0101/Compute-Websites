@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>The Avengers</title>
+        <link rel="stylesheet" href="style.css" >
+    </head>
+    <body>
+          <audio id="bg-music" loop>
+    <source src="theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="music-toggle">Play Music</button>
+
+<script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-toggle");
+
+    let isPlaying = false;
+
+    button.addEventListener("click", () => {
+        if (!isPlaying) {
+            music.play();
+            button.textContent = "Pause Music";
+        } else {
+            music.pause();
+            button.textContent = "Play Music";
+        }
+        isPlaying = !isPlaying;
+    });
+</script>
+        <header class="hero-banner">
+    <a href="index.html">
+        <img src="avengers-logo.jpg" alt="Avengers Logo" class="logo" />
+    </a>
+    <h1>Earth’s Mightiest Heroes</h1>
+</header>
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="gallery"  >
+            <a href="thor.html"><img src="avengers_01.jpg" /></a>
+            <a href="iron-man.html"><img src="avengers_02.jpg" /></a>
+            <a href="hulk.html"><img src="avengers_03.jpg" /></a>
+            <a href="hawkeye.html"><img src="avengers_04.jpg" /></a>
+            <a href="captain-america.html"><img src="avengers_05.jpg" /></a>
+            <a href="black-widow.html"><img src="avengers_06.jpg" /></a>
+        </div>
+    </body>
+</html>
